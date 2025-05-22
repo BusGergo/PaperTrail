@@ -4,6 +4,8 @@ import './index.css';
 import App from './App.tsx';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import NotFoundPage from './pages/NotFoundPage.tsx';
+import LoginPage from './pages/LoginPage.tsx';
+import RegistrationPage from './pages/RegistrationPage.tsx';
 
 const router = createBrowserRouter([
   {
@@ -11,6 +13,8 @@ const router = createBrowserRouter([
     element: <App />,
   },
   { path: '*', element: <NotFoundPage /> },
+  { path: '/login', element: <LoginPage /> },
+  { path: '/registration', element: <RegistrationPage /> },
 ]);
 
 createRoot(document.getElementById('root')!).render(
